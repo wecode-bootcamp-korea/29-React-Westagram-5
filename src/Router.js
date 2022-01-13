@@ -12,6 +12,9 @@ import JiwoonMain from './pages/29th moon/MainJiwoon/MainJiwoon';
 
 import YejiLogin from './pages/29th-jang/LoginYeji/LoginYeji';
 import YejiMain from './pages/29th-jang/MainYeji/MainYeji';
+
+import NavBar from './components/Nav/Nav';
+
 function Router() {
   return (
     <BrowserRouter>
@@ -27,6 +30,8 @@ function Router() {
 
         <Route path="/login-yeji" element={<YejiLogin />} />
         <Route path="/main-yeji" element={<YejiMain />} />
+
+        <Route path="/nav" element={<NavBar />} />
       </Routes>
     </BrowserRouter>
   );
