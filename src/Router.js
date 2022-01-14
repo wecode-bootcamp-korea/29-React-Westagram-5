@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import LoginJeeyoon from './pages/29th kim/LoginJeeyoon/LoginJeeyoon';
-import MainJeeyoon from './pages/29th kim/MainJeeyoon/MainJeeyoon';
+import LoginJiyoon from './pages/29th kim/LoginJiyoon/LoginJiyoon';
+import MainJiyoon from './pages/29th kim/MainJiyoon/MainJiyoon';
 
 import JaehyungLogin from './pages/29th-park/LoginJaehyung/LoginJaehyung';
 import JaehyungMain from './pages/29th-park/MainJaehyung/MainJaehyung';
@@ -12,12 +12,13 @@ import JiwoonMain from './pages/29th moon/MainJiwoon/MainJiwoon';
 
 import YejiLogin from './pages/29th-jang/LoginYeji/LoginYeji';
 import YejiMain from './pages/29th-jang/MainYeji/MainYeji';
+
 function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/login-jeeyoon" element={<LoginJeeyoon />} />
-        <Route path="/main-jeeyoon" element={<MainJeeyoon />} />
+        <Route path="/login-Jiyoon" element={<LoginJiyoon />} />
+        <Route path="/main-Jiyoon" element={<MainJiyoon />} />
 
         <Route path="/login-jaehyung" element={<JaehyungLogin />} />
         <Route path="/main-jaehyung" element={<JaehyungMain />} />
