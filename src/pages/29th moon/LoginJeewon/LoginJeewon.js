@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 import './LoginJeewon.scss';
@@ -9,6 +9,10 @@ function LoginJeewon() {
   const goToMain = () => {
     navigate('/main-Jeewon');
   };
+
+  const [IDInput, handleIdInput] = useState('');
+  const [PWInput, handlePwInput] = useState('');
+
   return (
     <div className="main-container">
       <main className="login-container">
@@ -18,11 +22,17 @@ function LoginJeewon() {
             className="id login-input"
             type="text"
             placeholder="전화번호, 사용자 이름 또는 이메일"
+            onChange={e => {
+              handleIdInput(e.target.value);
+            }}
           />
           <input
             className="password login-input"
             type="password"
             placeholder="비밀번호"
+            onchange={e => {
+              handlePwInput(e.target.value);
+            }}
           />
           <Link to="/main-Jeewon">
             <button className="loginBtn button">로그인</button>
