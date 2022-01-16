@@ -69,7 +69,7 @@ function MainJeewon() {
             <div className="comment-icon-left">
               <img
                 className="heart-icon"
-                src="images/Moon/MainMoon/heartLogo.png"
+                src="images/Moon/MainMoon/redheart.png"
                 alt="heart"
               />
               <img
@@ -94,8 +94,8 @@ function MainJeewon() {
           <div className="user-comment">
             <div className="user-comment-one">
               <span className="user-id-span">feature_byungMin</span>
-              <span className="user-comment-span">오늘도 솔로 세션....? </span>
-              <span className="user-comment-more">more </span>
+              <span className="user-comment-span">오늘은 솔로 세션....? </span>
+              <span className="user-comment-more more">더 보기 </span>
             </div>
             <div className="user-comment-one">
               <span className="view-more">모든 댓글 보기</span>
@@ -119,6 +119,11 @@ function MainJeewon() {
           <div className="time">21분 전</div>
 
           <div className="new-comment">
+            <img
+              src="images/Moon/MainMoon/smileicon.png"
+              alt="smile"
+              className="smile-icon"
+            />
             <input
               className="write-new-comment"
               type="text"

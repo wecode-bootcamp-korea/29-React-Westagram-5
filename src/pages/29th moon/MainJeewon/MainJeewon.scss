@@ -6,6 +6,8 @@
 
 .main-section {
   width: 43%;
+  margin-left: 245px;
+
   .user-nav {
     border: 0.01em solid #dbdbdb;
     display: flex;
@@ -75,6 +77,9 @@
           color: #909090;
           margin-left: 5px;
         }
+        .more {
+          font-size: 14px;
+        }
         .view-more {
           font-size: 14px;
           color: #909090;
@@ -88,7 +93,7 @@
         font-weight: 550;
       }
       .user-comment-span {
-        padding: 0px 0px 5px 15px;
+        padding: 0px 0px 0px 15px;
       }
     }
 
@@ -106,11 +111,16 @@
       display: flex;
       border-top: 0.01em solid #dbdbdb;
       padding: 15px;
+      .smile-icon {
+        height: 17px;
+      }
       .write-new-comment {
         border: none;
         width: 100%;
         height: 100%;
         font-size: 15px;
+        margin-left: 10px;
+        outline: none;
       }
       .upload-btn {
         border: none;
@@ -198,16 +208,11 @@
 
 /* 
 .feeds{
-
 }
-
 .article{
-
 }
-
 .main-right{
   
 }
-
 .profile{
 } */
