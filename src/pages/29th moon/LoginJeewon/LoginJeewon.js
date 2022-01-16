@@ -20,8 +20,9 @@ function LoginJeewon() {
 
   const [IDInput, handleIdInput] = useState(''); //Mission 1
   const [PWInput, handlePwInput] = useState(''); //Mission 1
+  // ======질문======: state 사용해서 isValid 구현 가능 여부
   // const [isValid, setIsValid] = useState(false);
-  // 질문: state 사용해서 isValid 구현 가능 여부
+  // ================================================
   return (
     <div className="main-container">
       <main className="login-container">
@@ -53,6 +54,17 @@ function LoginJeewon() {
               // Mission 2 - 조건 충족 여부에 따라 className 부여
               onClick={validId}
               // Mission 2 - '@' 포함 여부 onClick으로 구현
+
+              // =========== 질문 ================
+              // const [btnColor, setBtnColor] = useState('rgb(190, 226, 250)')
+              // {
+              //   IDInput.length && PWInput.length > 5
+              //   ? setBtnColor('red')
+              //   : setBtnColor('blue')
+              // }
+              // style={{backgroundColor: btnColor}}
+              // className의 background-color 값과 inline-style의 값이 충돌해서 구현 불가능?
+              // ================================
             >
               로그인
             </button>
@@ -63,7 +75,6 @@ function LoginJeewon() {
           <button onClick={goToMain} className="test">
             테스트: onClick으로 다른 페이지 이동
           </button>
-          {/* <button onClick={function(){}}></button> */}
         </div>
       </main>
     </div>
