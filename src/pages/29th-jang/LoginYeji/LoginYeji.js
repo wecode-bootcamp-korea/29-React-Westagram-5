@@ -4,11 +4,21 @@ import { useState } from 'react';
 import './LoginYeji.scss';
 
 function Login() {
-  const [accountId, setAccountId] = useState('');
-  const [accountPw, setAccountPw] = useState('');
+  const [accountId, setAccountId] = useState();
+  const [accountPw, setAccountPw] = useState();
 
-  const handleIdInput = e => setAccountId(e.target.value);
-  const handlePwInput = e => setAccountPw(e.target.value);
+  const [idValid, setIdValid] = useState(false);
+  const [pwValid, setPwValid] = useState(false);
+
+  const handleIdChange = e => {
+    setIdValid(e.target.value.includes('@'));
+    setAccountId(e.target.value);
+  };
+
+  const handlePwChange = e => {
+    setPwValid(e.target.value.length >= 5);
+    setAccountPw(e.target.value);
+  };
 
   const navigate = useNavigate();
   const goToMain = () => {
@@ -26,7 +36,7 @@ function Login() {
                 className="idInput"
                 type="text"
                 placeholder="전화번호,사용자 이름 또는 이메일"
-                onChange={handleIdInput}
+                onChange={e => handleIdChange(e)}
               />
             </div>
             <div className="pwForm">
@@ -34,11 +44,16 @@ function Login() {
                 className="pwInput"
                 type="password"
                 placeholder="비밀번호"
-                onChange={handlePwInput}
+                onChange={e => handlePwChange(e)}
               />
             </div>
           </div>
-          <button type="button" className="logB" onClick={goToMain}>
+          <button
+            type="button"
+            className="logB"
+            disabled={!idValid || !pwValid}
+            onClick={goToMain}
+          >
             로그인
           </button>
           <div className="lostpw">비밀번호를 잊으셨나요?</div>

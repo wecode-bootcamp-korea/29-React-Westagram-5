@@ -56,12 +56,17 @@
     }
 
     .logB {
-      width: 275px;
-      padding: 10px 5px;
+      width: 250px;
+      padding: 10px;
       color: whitesmoke;
-      background-color: #c5dff9;
+      background-color: #77c8f8;
+      cursor: pointer;
       border: none;
       border-radius: 5px;
+      .disabled {
+        background-color: #77c8f8;
+        opacity: 50%;
+      }
     }
 
     .lostpw {
