@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './MainJeewon.scss';
 // import Navbar from 'src/components/Nav/Nav.js';
 
 function MainJeewon() {
+  const [newComment, setNewComment] = useState([]); //빈배열 or ['comment']
+  const [commentInput, setCommentInput] = useState('');
+
+  // const handleKeyDown = e => {
+  //   if (e.key === 'Enter') {
+  //     let newArray = [...newComment];
+  //     newArray.push(commentInput);
+  //     setNewComment(newArray);
+  //   }
+  // };
   return (
     // <Nav />
 
@@ -115,9 +125,20 @@ function MainJeewon() {
                 src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
               />
             </div>
+            {newComment.map(a => {
+              return (
+                <div className="user-comment-next">
+                  <span className="user-id-span">feature_byungMin</span>
+                  <span className="user-comment-span">{a}</span>
+                </div>
+              );
+            })}
           </div>
           <div className="time">21분 전</div>
-
+          {/* input에 접근 onChange={e => {handlePwInput(e.target.value)}}
+              comment를 배열로 저장
+              배열에 추가하여 
+          */}
           <div className="new-comment">
             <img
               src="images/Moon/MainMoon/smileicon.png"
@@ -129,8 +150,31 @@ function MainJeewon() {
               type="text"
               placeholder="새로운 댓글 ..."
               size="50"
+              onChange={e => {
+                setCommentInput(e.target.value);
+              }}
             />
-            <button className="upload-btn">게시</button>
+            <button //Mission 3
+              className="upload-btn"
+              onClick={() => {
+                let newArray = [...newComment];
+                newArray.push(commentInput);
+                setNewComment(newArray);
+                // setCommentInput(() => '');====댓글창 비우기 미구현====
+              }}
+              // =======Enter로 댓글 달기 미구현=======
+              // onKeyDown={handleKeyDown}
+              // onKeyDown={e => {
+              //   if (e.key === 'Enter') {
+              //     let newArray = [...newComment];
+              //     newArray.push(commentInput);
+              //     setNewComment(newArray);
+              //   } else {
+              //   }
+              // }}
+            >
+              게시
+            </button>
           </div>
         </section>
       </main>
