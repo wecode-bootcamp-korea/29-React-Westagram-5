@@ -3,16 +3,29 @@ import './MainJeewon.scss';
 // import Navbar from 'src/components/Nav/Nav.js';
 
 function MainJeewon() {
-  const [newComment, setNewComment] = useState([]); //빈배열 or ['comment']
+  const [newComment, setNewComment] = useState([]);
   const [commentInput, setCommentInput] = useState('');
 
-  // const handleKeyDown = e => {
-  //   if (e.key === 'Enter') {
-  //     let newArray = [...newComment];
-  //     newArray.push(commentInput);
-  //     setNewComment(newArray);
-  //   }
-  // };
+  const postThis = e => {
+    console.log('clicked'); //추후 삭제
+    // e.preventDefault();========어떻게 사용?========
+    const newArray = [...newComment];
+    newArray.push(commentInput);
+    setNewComment(newArray);
+    // setCommentInput(''); ======input 초기화 질문 =========
+  };
+
+  const onKeyDown = e => {
+    console.log('pressed enter'); // 추후 삭제
+    // e.preventDefault(); ========어떻게 사용>========
+    if (e.key === 'Enter') {
+      let newArrayy = [...newComment];
+      newArrayy.push(commentInput);
+      setNewComment(newArrayy);
+      // setCommentInput(''); ======input 초기화 질문 =========
+    }
+  };
+
   return (
     // <Nav />
 
@@ -125,6 +138,9 @@ function MainJeewon() {
                 src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
               />
             </div>
+            {/* {newComment.map(() => {
+              <Comment newComment={newComment} />;
+            })} */}
             {newComment.map(a => {
               return (
                 <div className="user-comment-next">
@@ -153,25 +169,11 @@ function MainJeewon() {
               onChange={e => {
                 setCommentInput(e.target.value);
               }}
+              onKeyDown={onKeyDown}
             />
             <button //Mission 3
               className="upload-btn"
-              onClick={() => {
-                let newArray = [...newComment];
-                newArray.push(commentInput);
-                setNewComment(newArray);
-                // setCommentInput(() => '');====댓글창 비우기 미구현====
-              }}
-              // =======Enter로 댓글 달기 미구현=======
-              // onKeyDown={handleKeyDown}
-              // onKeyDown={e => {
-              //   if (e.key === 'Enter') {
-              //     let newArray = [...newComment];
-              //     newArray.push(commentInput);
-              //     setNewComment(newArray);
-              //   } else {
-              //   }
-              // }}
+              onClick={postThis}
             >
               게시
             </button>
@@ -181,6 +183,17 @@ function MainJeewon() {
     </>
   );
 }
+
+// function Comment(props) {
+//   return (
+//     <>
+//       <div className="user-comment-next">
+//         <span className="user-id-span">feature_byungMin</span>
+//         <span className="user-comment-span">{props.newComment}</span>
+//       </div>
+//     </>
+//   );
+// }
 
 // {
 //   /* <div class="user-info">
