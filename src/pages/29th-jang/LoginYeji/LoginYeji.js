@@ -1,14 +1,20 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import './LoginYeji.scss';
 
-
 function Login() {
-  const navigate = useNavigate();
+  const [accountId, setAccountId] = useState('');
+  const [accountPw, setAccountPw] = useState('');
 
+  const handleIdInput = e => setAccountId(e.target.value);
+  const handlePwInput = e => setAccountPw(e.target.value);
+
+  const navigate = useNavigate();
   const goToMain = () => {
     navigate('/main-yeji');
   };
+
   return (
     <div>
       <div className="logIn">
@@ -20,6 +26,7 @@ function Login() {
                 className="idInput"
                 type="text"
                 placeholder="전화번호,사용자 이름 또는 이메일"
+                onChange={handleIdInput}
               />
             </div>
             <div className="pwForm">
@@ -27,6 +34,7 @@ function Login() {
                 className="pwInput"
                 type="password"
                 placeholder="비밀번호"
+                onChange={handlePwInput}
               />
             </div>
           </div>
