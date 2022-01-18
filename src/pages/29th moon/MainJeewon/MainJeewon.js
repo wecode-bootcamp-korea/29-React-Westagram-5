@@ -141,14 +141,18 @@ function MainJeewon() {
             {/* {newComment.map(() => {
               <Comment newComment={newComment} />;
             })} */}
-            {newComment.map(a => {
+
+            {newComment.map(text => {
+              return <Comment commentInput={text} />;
+            })}
+            {/* {newComment.map(a => {
               return (
                 <div className="user-comment-next">
                   <span className="user-id-span">feature_byungMin</span>
                   <span className="user-comment-span">{a}</span>
-                </div>
+                </div> //commentInput={CommentInput}
               );
-            })}
+            })} */}
           </div>
           <div className="time">21분 전</div>
           {/* input에 접근 onChange={e => {handlePwInput(e.target.value)}}
@@ -184,16 +188,16 @@ function MainJeewon() {
   );
 }
 
-// function Comment(props) {
-//   return (
-//     <>
-//       <div className="user-comment-next">
-//         <span className="user-id-span">feature_byungMin</span>
-//         <span className="user-comment-span">{props.newComment}</span>
-//       </div>
-//     </>
-//   );
-// }
+function Comment(props) {
+  return (
+    <>
+      <div className="user-comment-next">
+        <span className="user-id-span">feature_byungMin</span>
+        <span className="user-comment-span">{props.commentInput}</span>
+      </div>
+    </>
+  );
+}
 
 // {
 //   /* <div class="user-info">
