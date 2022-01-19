@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "userName": "wecode",
+    "content": "우와 너무 맛있어보여요",
+    "isLiked": true
+  },
+  {
+    "id": 2,
+    "userName": "yeji",
+    "content": "저도 같이먹어요~",
+    "isLiked": false
+  },
+  {
+    "id": 3,
+    "userName": "Jang",
+    "content": "저기압일땐 고기앞으로!!",
+    "isLiked": false
+  }
+]

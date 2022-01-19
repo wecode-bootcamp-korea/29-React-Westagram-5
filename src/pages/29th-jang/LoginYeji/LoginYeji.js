@@ -22,6 +22,18 @@ function Login() {
 
   const navigate = useNavigate();
   const goToMain = () => {
+    fetch('http://10.58.3.161:8000/users/signin', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: accountId,
+        password: accountPw,
+        name: '',
+        phone: '',
+        account: '',
+      }),
+    })
+      .then(response => response.json())
+      .then(result => console.log('결과: ', result));
     navigate('/main-yeji');
   };
 

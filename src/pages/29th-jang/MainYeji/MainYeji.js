@@ -1,7 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
+import CommentList from './CommentList';
 import './MainYeji.scss';
 
 function YejiMain() {
+  const [value, setValue] = useState('');
+  const [newCommentList, setNewCommentList] = useState([]);
+
+  const addComment = e => setValue(e.target.value);
+
+  const commentUpload = () => {
+    if (value.length > 0) {
+      const newComment = {
+        id: '',
+        nickname: 'Yeji ',
+        text: value,
+      };
+
+      setNewCommentList([...newCommentList, newComment]);
+      setValue('');
+    }
+  };
+
   return (
     <div className="mainWrap">
       <main className="maincontainer">
@@ -54,15 +73,26 @@ function YejiMain() {
                 </div>
                 <form className="comment">
                   <ul className="commentOut">
-                    <li className="userName">nickname</li>
-                    <li className="userComment">댓글생성</li>
+                    {newCommentList.map((el, index) => (
+                      <CommentList
+                        key={index}
+                        nickname={el.nickname}
+                        text={el.text}
+                      />
+                    ))}
                   </ul>
                   <input
                     className="commentIn"
                     type="text"
                     placeholder="댓글 달기..."
+                    onChange={addComment}
+                    value={value}
                   />
-                  <button className="commentBt" type="button">
+                  <button
+                    className="commentBt"
+                    type="button"
+                    onClick={commentUpload}
+                  >
                     게시
                   </button>
                 </form>
