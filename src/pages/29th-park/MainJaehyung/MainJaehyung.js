@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './MainJaehyung.scss';
 
 function JaehyungMain() {
+  const [newReple, setNewReple] = useState([]);
+  const [repleInput, setRepleInput] = useState('');
+
+  const clickBtn = () => {
+    let newArray = [...newReple];
+    newArray.push(repleInput);
+    setNewReple(newArray);
+  };
+  const enter = e => {
+    if (e.key === 'Enter') {
+      let newArray = [...newReple];
+      newArray.push(setNewReple);
+      setNewReple(newArray);
+    }
+  };
   return (
     <div className="mainJaehyung">
-      <class className="westagram" />
-
       <nav className="navigation">
         <div className="logo_bar">
           <img
@@ -25,23 +38,25 @@ function JaehyungMain() {
           <img alt="마이페이지" src="Images/Park/MainPark/profile.png" />
         </div>
       </nav>
-      <class />
-
-      <div>
-        <main className="main">
-          <div className="feeds">
-            <article />
-          </div>
-          <div className="main_right" />
-        </main>
-        <div className="reple">
-          <input
-            className="reple_place"
-            type="text"
-            placeholder="댓글달기..."
-          />
-          <button className="reple_btn">게시</button>
+      <div className="main">
+        <div className="feed">
+          <article className="article">
+            <div>wecod_bootcamp</div>
+            <div>WeCode-위코드</div>
+            <img src="images/Park/MainPark/drum.webp" alt="drum" />
+            <div className="repleBox">
+              <input
+                onChange={e => {
+                  setRepleInput(e.target.value);
+                }}
+                type="text"
+                placeholder="댓글 달기..."
+              />
+              <button onClick={clickBtn}>게시</button>
+            </div>
+          </article>
         </div>
+        <div className="aside" />
       </div>
     </div>
   );
