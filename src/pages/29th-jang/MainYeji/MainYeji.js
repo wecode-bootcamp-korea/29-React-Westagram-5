@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import CommentList from './CommentList';
+import Navbar from '../../../components/Nav/Nav';
 import './MainYeji.scss';
 
 function YejiMain() {
@@ -24,14 +25,7 @@ function YejiMain() {
   return (
     <div className="mainWrap">
       <main className="maincontainer">
-        <nav className="navBar">
-          <i className="fab fa-instagram" />
-          <span>westagram</span>
-          <input className="searching" type="text" placeholder="검색" />
-          <i className="far fa-user" />
-          <i className="far fa-compass" />
-          <i className="far fa-heart" />
-        </nav>
+        <Navbar />
         <div className="main">
           <div className="feed">
             <article className="post">
