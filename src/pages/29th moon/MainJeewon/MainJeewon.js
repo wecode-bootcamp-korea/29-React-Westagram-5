@@ -7,7 +7,6 @@ function MainJeewon() {
   const [commentInput, setCommentInput] = useState('');
 
   const postThis = e => {
-    // e.preventDefault();
     const newArray = [...newComment];
     newArray.push(commentInput);
     setNewComment(newArray);
@@ -15,7 +14,6 @@ function MainJeewon() {
   };
 
   const onKeyDown = e => {
-    // e.preventDefault();
     if (e.key === 'Enter') {
       let newArrayy = [...newComment];
       newArrayy.push(commentInput);
@@ -121,10 +119,7 @@ function MainJeewon() {
               }}
               onKeyDown={onKeyDown}
             />
-            <button //Mission 3
-              className="upload-btn"
-              onClick={postThis}
-            >
+            <button className="upload-btn" onClick={postThis}>
               게시
             </button>
           </div>
