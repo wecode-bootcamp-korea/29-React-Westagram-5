@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './MainJeewon.scss';
-import Navbar from '../../../components/Nav/Nav';
+import Nav from '../../../components/Nav/Nav';
 
 function MainJeewon() {
   const [newComment, setNewComment] = useState([]);
@@ -26,7 +26,7 @@ function MainJeewon() {
 
   return (
     <>
-      <Navbar />
+      <Nav />
       <main className="main-section">
         <section className="user-nav">
           <div>
@@ -121,7 +121,10 @@ function MainJeewon() {
               }}
               onKeyDown={onKeyDown}
             />
-            <button className="upload-btn" onClick={postThis}>
+            <button //Mission 3
+              className="upload-btn"
+              onClick={postThis}
+            >
               게시
             </button>
           </div>

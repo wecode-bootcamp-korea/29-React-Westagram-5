@@ -1,17 +1,39 @@
 import React from 'react';
 import './Nav.scss';
 
-function Navbar() {
+function Nav() {
   return (
-    <nav className="navBar">
-      <i className="fab fa-instagram" />
-      <span>westagram</span>
-      <input className="searching" type="text" placeholder="검색" />
-      <i className="far fa-user" />
-      <i className="far fa-compass" />
-      <i className="far fa-heart" />
+    <nav className="nav-main">
+      <div className="section-left">
+        <img
+          src="images/Moon/MainMoon/instagramLogo.png"
+          alt="instagram"
+          className="instalogo"
+        />
+      </div>
+      <div className="section-center">
+        <input type="text" placeholder="검색" className="search-box" />
+      </div>
+      <div className="section-right">
+        <img src="images/Moon/MainMoon/dmLogo.png" alt="dm" className="icon" />
+        <img
+          src="/images/Moon/MainMoon/heartLogo.png"
+          alt="heart"
+          className="icon icon-heart"
+        />
+        <img
+          src="images/Moon/MainMoon/homeLogo.png"
+          alt="home"
+          className="icon icon-home"
+        />
+        <img
+          src="images/Moon/MainMoon/profilepic.png"
+          alt="profile"
+          className="icon-profile"
+        />
+      </div>
     </nav>
   );
 }
 
-export default Navbar;
+export default Nav;

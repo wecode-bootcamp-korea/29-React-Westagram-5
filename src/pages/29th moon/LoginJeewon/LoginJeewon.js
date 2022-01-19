@@ -4,13 +4,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import './LoginJeewon.scss';
 
 function LoginJeewon() {
-  const validId = () => {
-    if (!IDInput.includes('@')) {
-      alert('아이디를 다시 확인해주세요');
-    } else {
-    }
-  };
-
   const fetchFunction = () => {
     fetch('http://10.58.3.67:8000/users/signup', {
       method: 'POST',
@@ -18,16 +11,23 @@ function LoginJeewon() {
         email: IDInput,
         password: PWInput,
       }),
-    }) // ip주소 request//kurly product의 데이터가 들어옴 예)"id:1 product: ~~ src: https://img"
-      .then(response => response.json()) //json으로 받은걸 object형식으로 바꿈
-      .then(result =>
-        if(response.message === 'INVALID_FORMAT'){
-          alert('아이디 / 비밀번호를 확인해주세요')
-        });
+    })
+      .then(response => response.json())
+      .then(result => {
+        if (result.message === 'INVALID_FORMAT') {
+          alert('아이디 / 비밀번호를 확인해주세요');
+        } else if (result.message === 'SUCCESS') {
+          goToMain();
+          alert('환영합니다!');
+        }
+      });
   };
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
+  function goToMain() {
+    navigate('/main-Jeewon');
+  }
   const [IDInput, handleIdInput] = useState('');
   const [PWInput, handlePwInput] = useState('');
 
@@ -59,7 +59,6 @@ function LoginJeewon() {
                   ? 'loginBtn-active'
                   : 'loginBtn-inactive'
               }
-              // onClick={useEffect}
               onClick={fetchFunction}
             >
               로그인
