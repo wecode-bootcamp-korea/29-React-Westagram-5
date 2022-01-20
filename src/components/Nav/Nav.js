@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Nav.scss';
 
 function Nav() {
+  const [searchInput, setSearchInput] = useState('');
+
+  const clearSearch = () => {
+    setSearchInput('');
+  };
   return (
     <nav className="nav-main">
       <div className="section-left">
@@ -12,7 +17,22 @@ function Nav() {
         />
       </div>
       <div className="section-center">
-        <input type="text" placeholder="&#xF002; 검색" className="search-box" />
+        <input
+          type="text"
+          placeholder="&#xF002;  검색"
+          className="search-box"
+          value={searchInput}
+          onChange={e => {
+            setSearchInput(e.target.value);
+          }}
+        />
+        <button onClick={clearSearch} className="clear-search-btn">
+          <img
+            src="images/Moon/MainMoon/clear.png"
+            alt="x"
+            className="icon-search-clear"
+          />
+        </button>
       </div>
       <div className="section-right">
         <img src="images/Moon/MainMoon/dmLogo.png" alt="dm" className="icon" />
