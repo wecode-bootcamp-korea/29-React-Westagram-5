@@ -9,12 +9,18 @@ function YejiMain() {
   const [newCommentList, setNewCommentList] = useState([]);
 
   const addComment = e => setValue(e.target.value);
+  const handleKeyPress = e => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      commentUpload();
+    }
+  };
 
   const commentUpload = () => {
     if (value.length > 0) {
       const newComment = {
         id: '',
-        nickname: 'Yeji ',
+        nickName: 'Yeji ',
         text: value,
       };
 
@@ -71,7 +77,7 @@ function YejiMain() {
                     {newCommentList.map((el, index) => (
                       <CommentList
                         key={index}
-                        nickname={el.nickname}
+                        nickName={el.nickName}
                         text={el.text}
                       />
                     ))}
@@ -81,6 +87,7 @@ function YejiMain() {
                     type="text"
                     placeholder="댓글 달기..."
                     onChange={addComment}
+                    onKeyPress={handleKeyPress}
                     value={value}
                   />
                   <button
