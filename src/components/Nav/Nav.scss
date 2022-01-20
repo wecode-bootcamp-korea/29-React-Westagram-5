@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
   .nav-main {
     display: flex;
     justify-content: space-between;
@@ -14,11 +15,13 @@
       align-items: center;
       margin-left: 50px;
       width: 100%;
+
       .instalogo {
         height: 33px;
         margin-left: 190px;
       }
     }
+
     .section-center {
       display: flex;
       justify-content: center;
@@ -26,31 +29,39 @@
       width: 100%;
       margin-left: 180px;
     }
+
     .section-right {
       display: flex;
       justify-content: right;
       margin-right: 260px;
       width: 100%;
     }
+
     .icon-heart {
       margin-left: 30px;
     }
+
     .icon-home {
       margin-left: 30px;
     }
+
     .icon-profile {
       margin-left: 30px;
       height: 26px;
     }
+
     .search-box {
       height: 35px;
-      background-color: #EFEFEF;
+      background-color: #efefef;
       border: none;
       width: 86%;
       border-radius: 7px;
-      font-size: 18px;
+      font-size: 16px;
       padding-left: 25px;
       position: relative;
+      outline: none;
+      font-family: Arial, FontAwesome;
+      outline: none;
     }
     .icon {
       height: 25px;
