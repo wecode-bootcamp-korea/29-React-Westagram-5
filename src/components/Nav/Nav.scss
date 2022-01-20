@@ -28,8 +28,17 @@
       align-items: center;
       width: 100%;
       margin-left: 180px;
+
       .icon-search-clear {
-        height: 20px;
+        height: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .clear-search-btn {
+        border: none;
+        position: relative;
+        margin-left: 240px;
       }
     }
 
@@ -58,16 +67,17 @@
       height: 35px;
       background-color: #efefef;
       border: none;
-      width: 86%;
+      width: 280px;
       border-radius: 7px;
       font-size: 18px;
       padding-left: 20px;
       position: relative;
       font-family: FontAwesome;
       outline: none;
+      position: absolute;
     }
-    .icon {
-      height: 25px;
-    }
+  }
+  .icon {
+    height: 25px;
   }
 }

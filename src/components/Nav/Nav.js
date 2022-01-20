@@ -19,13 +19,14 @@ function Nav() {
       <div className="section-center">
         <input
           type="text"
-          placeholder="&#xF002; 검색"
+          placeholder="&#xF002;  검색"
           className="search-box"
+          value={searchInput}
           onChange={e => {
             setSearchInput(e.target.value);
           }}
         />
-        <button onClick={clearSearch} className="">
+        <button onClick={clearSearch} className="clear-search-btn">
           <img
             src="images/Moon/MainMoon/clear.png"
             alt="x"
