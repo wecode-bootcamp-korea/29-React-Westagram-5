@@ -12,7 +12,7 @@ function Nav() {
         />
       </div>
       <div className="section-center">
-        <input type="text" placeholder="검색" className="search-box" />
+        <input type="text" placeholder="&#xF002; 검색" className="search-box" />
       </div>
       <div className="section-right">
         <img src="images/Moon/MainMoon/dmLogo.png" alt="dm" className="icon" />
@@ -35,4 +35,5 @@ function Nav() {
     </nav>
   );
 }
+
 export default Nav;

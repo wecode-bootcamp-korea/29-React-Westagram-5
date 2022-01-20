@@ -37,32 +37,32 @@ const Login = () => {
 
   const activeBtn = email.includes('@') && password.length >= 5;
 
-  const signUp = () => {
-    fetch('http://10.58.5.6:8000/users/login', {
-      method: 'POST',
-      body: JSON.stringify({
-        email: email,
-        password: password,
-      }),
-    })
-      .then(response => response.json())
-      .then(result => {
-        if (result.message === 'SUCCESS') {
-          goToMain();
-        } else if (result.message === 'INVALID_EMAIL') {
-          alert('이메일을 확인해주시기 바랍니다.');
-        } else if (result.message === 'INVALID_USER (password)') {
-          alert('비밀번호를 확인해주시기 바랍니다.');
-        }
-        console.log('결과: ', result);
-      });
-  };
+  // const signUp = () => {
+  //   fetch('http://10.58.5.6:8000/users/login', {
+  //     method: 'POST',
+  //     body: JSON.stringify({
+  //       email: email,
+  //       password: password,
+  //     }),
+  //   })
+  //     .then(response => response.json())
+  //     .then(result => {
+  //       if (result.message === 'SUCCESS') {
+  //         goToMain();
+  //       } else if (result.message === 'INVALID_EMAIL') {
+  //         alert('이메일을 확인해주시기 바랍니다.');
+  //       } else if (result.message === 'INVALID_USER (password)') {
+  //         alert('비밀번호를 확인해주시기 바랍니다.');
+  //       }
+  //       console.log('결과: ', result);
+  //     });
+  // };
 
   return (
-    <div class="section">
+    <div className="section">
       <section>
         <div className="loginPage">
-          <div class="title">Westagram</div>
+          <div className="title">Westagram</div>
 
           {/* <form> */}
           <div className="loginInput">
