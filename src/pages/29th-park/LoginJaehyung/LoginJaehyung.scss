@@ -1,15 +1,15 @@
-.border {
+.loginJaehyung {
   width: 60vw;
   height: 100vh;
   margin: 20px auto;
   border: 1px solid #e9e9e9;
-  .title {
+  .jaehyungPageTitle {
     font-family: 'Lobster', cursive;
     font-size: 100px;
     margin: 10px auto;
     text-align: center;
   }
-  .user {
+  .userId {
     background-color: #fafafa;
     border: 1px solid #f1f1f1;
     display: block;
@@ -21,7 +21,7 @@
     outline: none;
     direction: none;
   }
-  .password {
+  .userPassword {
     background-color: #fafafa;
     border: 1px solid #f1f1f1;
     display: block;
@@ -33,7 +33,7 @@
     outline: none;
     text-decoration: none;
   }
-  .btn {
+  .loginBtn {
     background-color: blue;
     border: none;
     color: #fdfeff;
@@ -46,7 +46,7 @@
     cursor: pointer;
   }
 
-  .btn:disabled {
+  .loginBtn:disabled {
     background-color: #c4e1fb;
     cursor: default;
   }
