@@ -6,14 +6,14 @@ function MainJeewon() {
   const [newComment, setNewComment] = useState([]);
   const [commentInput, setCommentInput] = useState('');
 
-  const postThis = e => {
+  const postClick = e => {
     const newArray = [...newComment];
     newArray.push(commentInput);
     setNewComment(newArray);
     setCommentInput('');
   };
 
-  const onKeyDown = e => {
+  const postEnter = e => {
     if (e.key === 'Enter') {
       let newArrayy = [...newComment];
       newArrayy.push(commentInput);
@@ -109,6 +109,7 @@ function MainJeewon() {
               alt="smile"
               className="smile-icon"
             />
+
             <input
               className="write-new-comment"
               type="text"
@@ -117,9 +118,10 @@ function MainJeewon() {
               onChange={e => {
                 setCommentInput(e.target.value);
               }}
-              onKeyDown={onKeyDown}
+              onKeyDown={postEnter}
             />
-            <button className="upload-btn" onClick={postThis}>
+
+            <button className="upload-btn" onClick={postClick}>
               게시
             </button>
           </div>
