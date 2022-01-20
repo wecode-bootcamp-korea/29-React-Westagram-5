@@ -1,0 +1,79 @@
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-center-column {
+  @include flexCenter;
+  flex-direction: column;
+}
+
+@mixin input {
+  background-color: #fafafa;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 3px;
+  width: 250px;
+  padding: 5px 10px;
+}
+
+.logIn {
+  @include flexCenter;
+  height: 100vh;
+
+  section {
+    @include flex-center-column;
+    height: 450px;
+    width: 400px;
+    border: 2px solid gray;
+
+    .logo {
+      font-family: 'Lobster', cursive;
+      padding: 20px;
+      margin: 30px;
+      font-size: 50px;
+    }
+
+    .inputForm {
+      @include flex-center-column;
+      flex-direction: column;
+      margin: 10px;
+
+      .idForm {
+        margin: 0 0 10px 0;
+
+        .idInput {
+          @include input;
+        }
+      }
+
+      .pwForm {
+        .pwInput {
+          @include input;
+        }
+      }
+    }
+
+    .logB {
+      width: 250px;
+      padding: 10px;
+      color: whitesmoke;
+      background-color: #77c8f8;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      .disabled {
+        background-color: #77c8f8;
+        opacity: 50%;
+      }
+    }
+
+    .lostpw {
+      margin: 30px;
+      color: #345d87;
+      font-size: 15px;
+      font-weight: 600;
+    }
+  }
+}
