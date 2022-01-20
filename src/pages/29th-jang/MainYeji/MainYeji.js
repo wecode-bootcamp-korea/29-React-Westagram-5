@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import CommentList from './CommentList';
-import Navbar from '../../../components/Nav/Nav';
 import './MainYeji.scss';
 
 function YejiMain() {
@@ -25,7 +24,6 @@ function YejiMain() {
   return (
     <div className="mainWrap">
       <main className="maincontainer">
-        <Navbar />
         <div className="main">
           <div className="feed">
             <article className="post">
