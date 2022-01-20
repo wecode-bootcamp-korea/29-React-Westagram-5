@@ -18,6 +18,22 @@ const Main = () => {
     commentList(event.target.value);
   };
 
+  const postEnter = e => {
+    if (e.key === 'Enter') {
+      let arrayCopyEnter = [...commentList];
+      arrayCopyEnter.push(comment);
+      setCommentList(arrayCopyEnter);
+      setComment('');
+    }
+  };
+
+  const postClick = () => {
+    const arrayCopy = [...commentList];
+    arrayCopy.push(comment);
+    setCommentList(arrayCopy);
+    setComment('');
+  };
+
   return (
     <>
       <Nav />
@@ -114,8 +130,8 @@ const Main = () => {
                   //  이렇게 쓰게 되면 추가되거나 삭제됐을 경우 index가 달라져서 값의 고유한 index가 사라질 수 있으므로 보통 상수 데이터의 경우,
                   // { id:1, footer: "컬리 영상"} 이렇게 사용함
 
-                  commentList.map((댓글, i) => {
-                    return <OneComment 댓글={댓글} key={i} />;
+                  commentList.map((reaction, i) => {
+                    return <OneComment reaction={reaction} key={i} />;
                   })
                 }
                 <div className="timeLog">
@@ -127,17 +143,15 @@ const Main = () => {
                   id="commentInput"
                   className="commentInput"
                   type="text"
-                  placeholder="댓글 달기..."
+                  placeholder="reaction 달기..."
+                  value={comment}
                   onChange={e => setComment(e.target.value)}
+                  onKeyDown={postEnter}
                 />
                 <button
                   type="submit"
                   className="commentSubmit"
-                  onClick={() => {
-                    const arrayCopy = [...commentList];
-                    arrayCopy.push(comment);
-                    setCommentList(arrayCopy);
-                  }}
+                  onClick={postClick}
                 >
                   게시
                 </button>
@@ -304,7 +318,7 @@ function OneComment(props) {
       <li>
         <span>
           <span className="fontPoint userID">seizetheday</span>
-          {props.댓글}
+          {props.reaction}
         </span>
         <img
           className="commentHeart"
