@@ -1,0 +1,413 @@
+* {
+  box-sizing: border-box;
+  font-family: 'helvetica neue', 'Apple SD Gothic Neo', Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+body {
+  background-color: #fafafa;
+  padding: 0;
+  margin: 0;
+}
+p,
+span {
+  font-size: 14px;
+}
+
+/* general */
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-position: inside;
+}
+
+footer p {
+  margin-top: 18px;
+  font-size: 12px;
+  color: #c7c7c7;
+  line-height: 18px;
+  width: 310px;
+}
+
+.mainPic {
+  width: 100%;
+}
+
+.pic {
+  border-radius: 50%;
+}
+span.userID {
+  margin-right: 5px;
+}
+span.subSpan,
+span.overtime {
+  font-size: 12px;
+  color: #8e8e8e;
+}
+
+span.fontPoint {
+  font-weight: 500;
+  font-size: 14px;
+  color: #262626;
+}
+
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  padding: 10px 180px 10px 180px;
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  /* position: fixed; 질문 사항, 왜 이걸 넣으면 난장판이 될까*/
+}
+
+/* 헤더-인스타그램 로고와 글자 */
+.title {
+  display: flex;
+}
+
+.title h1 {
+  color: #262626df;
+  font-family: 'billabong';
+  font-size: 33px;
+  padding-left: 17px;
+  padding-top: 7px;
+}
+
+.title img {
+  box-sizing: content-box;
+  width: 25px;
+  height: 25px;
+  margin: auto;
+  padding-right: 17px;
+  padding-top: 3px;
+  border-right: 2px solid #262626;
+}
+
+/* 헤더-검색창 */
+.inputDiv {
+  text-align: center;
+  background-color: #fafafa;
+  border: 2px solid #e2e1e19a;
+  border-radius: 3px;
+  width: 245px;
+  height: 33px;
+}
+
+.fa-search {
+  position: relative;
+  font-size: 12px;
+  right: 160px;
+  color: #cac8c8;
+}
+
+/* 우측 메뉴 */
+.rightMenu img {
+  box-sizing: content-box;
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+}
+
+/* main - feeds & .mainRight */
+main {
+  display: flex;
+  padding: 60px 230px 0px 230px;
+}
+
+/* main */
+
+.articleHeader {
+  display: flex;
+  padding: 10px 30px 10px 30px;
+}
+.mainRight {
+  flex: 1;
+}
+.feeds {
+  margin-right: 34px;
+  flex: 2;
+}
+article,
+.section-story,
+.sectionRecommend {
+  background-color: #fff;
+  border-radius: 3px;
+  border: 1px solid #dbdbdb;
+}
+article {
+  margin-bottom: 60px;
+}
+
+.section-story,
+.sectionRecommend {
+  width: 310px;
+  padding: 14px 16px;
+  overflow-y: scroll;
+}
+
+.section-story li {
+  margin-bottom: 7px;
+}
+
+.section-story::-webkit-scrollbar {
+  display: none;
+}
+
+.sectionRecommend::-webkit-scrollbar {
+  display: none;
+}
+
+.section-story {
+  height: 212px;
+  margin-bottom: 20px;
+}
+.sectionRecommend {
+  height: 180px;
+}
+/* article */
+.articleProfile {
+  display: flex;
+  align-items: center;
+}
+.imgProfile {
+  width: 37px;
+  height: 37px;
+  border: 1px solid #fafafa;
+  border-radius: 50%;
+}
+.mainImage img {
+  width: 100%;
+}
+.mainId {
+  margin-left: 14px;
+}
+.icon-more {
+  justify-self: end;
+}
+.iconsReact {
+  height: 40px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.iconReact {
+  width: 25px;
+  height: 25px;
+}
+.iconsLeft {
+  display: flex;
+  align-items: center;
+}
+.iconsLeft .iconReact {
+  margin-right: 12px;
+}
+
+/* article */
+.reaction {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+}
+.likedPeople {
+  display: flex;
+  align-items: center;
+  height: 18px;
+  margin: 2px 0 8px 0;
+}
+.likedPeople img {
+  display: inline-block;
+  margin-right: 4px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #fafafa;
+}
+.likedPeople p {
+  display: inline-block;
+  color: #262626;
+  font-size: 14px;
+}
+.description {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  margin-bottom: 0;
+}
+
+.description p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+span.atTag {
+  color: #00376b;
+}
+
+ul.comments {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+ul.comments li {
+  height: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: #262626;
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 7px;
+}
+
+ul.comments span {
+  height: 15px;
+  margin-bottom: 7px;
+}
+img.commentHeart {
+  width: 12px;
+  height: 12px;
+}
+div.timeLog {
+  border-bottom: 1px solid #e2e1e1b0;
+}
+div.timeLog span {
+  height: 18px;
+  font-size: 12px;
+  color: #8e8e8e;
+}
+
+/* comment */
+
+.comment {
+  display: flex;
+  align-items: baseline;
+}
+
+.commentInput {
+  font-size: 14px;
+  width: 560px;
+  height: 18px;
+  padding: 28px 16px;
+  border-style: none;
+  color: #262626;
+}
+.commentInput:focus {
+  outline: none;
+}
+.commentInput::placeholder {
+  color: #8e8e8e;
+}
+button.commentSubmit {
+  color: #0094f6ea;
+  background-color: #fff;
+  border-style: none;
+  height: 40px;
+  width: 40px;
+  padding: 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.commentSubmit:disabled {
+  color: #b9dffc;
+}
+
+.commentInput {
+  background-color: white;
+}
+/* mainRight */
+.myProfile {
+  height: 56px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  padding-left: 12px;
+  display: flex;
+  align-items: center;
+}
+.myProfile img {
+  width: 56px;
+  height: 56px;
+}
+.myProfile div {
+  display: inline-block;
+  margin-left: 14px;
+}
+.myProfile div span {
+  display: block;
+}
+.myProfile div span.userID {
+  margin-bottom: 4px;
+}
+
+/* story & recommendation */
+.menuTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.subTitle {
+  font-size: 14px;
+  color: #8e8e8e;
+  font-weight: 600;
+}
+.findMore {
+  font-size: 12px;
+  font-weight: 600;
+  color: #262626;
+}
+.story-list li,
+.recommendList li {
+  display: flex;
+  align-items: flex-start;
+}
+
+.recommendList li {
+  margin-top: 7px;
+}
+
+ul.story-list img.story {
+  border: 1px solid #fff;
+}
+div.gradientWrap {
+  width: 41px;
+  height: 41px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: radial-gradient(circle at bottom left, #f58020 20%, #be278c);
+}
+ul.story-list .profileText {
+  margin-top: 3px;
+}
+.profileText {
+  display: inline-block;
+  margin: 0 0 10px 8px;
+}
+.profileText span {
+  display: block;
+}
+.profileText span.userID {
+  margin-bottom: 2px;
+}
+.recommendList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.btnFollow {
+  padding-top: 7px;
+  color: #0095f6;
+  font-weight: 600;
+  font-size: 12px;
+}
+.recommendFriendProfile {
+  display: flex;
+  align-items: flex-start;
+}
