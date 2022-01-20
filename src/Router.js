@@ -7,11 +7,12 @@ import MainJeeyoon from './pages/29th kim/MainJeeyoon/MainJeeyoon';
 import JaehyungLogin from './pages/29th-park/LoginJaehyung/LoginJaehyung';
 import JaehyungMain from './pages/29th-park/MainJaehyung/MainJaehyung';
 
-import JiwoonLogin from './pages/29th moon/LoginJiwoon/LoginJiwoon';
-import JiwoonMain from './pages/29th moon/MainJiwoon/MainJiwoon';
+import LoginJeewon from './pages/29th moon/LoginJeewon/LoginJeewon';
+import MainJeewon from './pages/29th moon/MainJeewon/MainJeewon';
 
 import YejiLogin from './pages/29th-jang/LoginYeji/LoginYeji';
 import YejiMain from './pages/29th-jang/MainYeji/MainYeji';
+
 function Router() {
   return (
     <BrowserRouter>
@@ -22,8 +23,8 @@ function Router() {
         <Route path="/login-jaehyung" element={<JaehyungLogin />} />
         <Route path="/main-jaehyung" element={<JaehyungMain />} />
 
-        <Route path="/login-jiwoon" element={<JiwoonLogin />} />
-        <Route path="/main-jiwoon" element={<JiwoonMain />} />
+        <Route path="/login-Jeewon" element={<LoginJeewon />} />
+        <Route path="/main-Jeewon" element={<MainJeewon />} />
 
         <Route path="/login-yeji" element={<YejiLogin />} />
         <Route path="/main-yeji" element={<YejiMain />} />

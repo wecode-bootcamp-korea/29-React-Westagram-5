@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-section {
+  width: 43%;
+  margin-left: 245px;
+
+  .user-nav {
+    border: 0.01em solid #dbdbdb;
+    border-top: none;
+    display: flex;
+    padding: 10px;
+
+    .img-profilepic {
+      height: 38px;
+    }
+    .user-info {
+      margin-left: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .user-id {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .user-img {
+    border: none;
+    margin: 0px;
+    padding: 0px;
+
+    .img-byungmin {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .main-comment-section {
+    border: 0.01em solid #dbdbdb;
+
+    .comment-icons {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 15px 10px;
+      .comment-icon-left {
+        .heart-icon {
+          height: 25px;
+          margin-right: 20px;
+        }
+        .comment-icon {
+          height: 25px;
+          margin-right: 20px;
+        }
+        .dm-icon {
+          height: 25px;
+        }
+      }
+
+      .comment-icon-right {
+        .share-icon {
+          height: 25px;
+        }
+      }
+    }
+
+    .user-comment {
+      .user-comment-one {
+        padding: 5px 0px 0px 15px;
+        .user-comment-more {
+          color: #909090;
+          margin-left: 5px;
+        }
+        .more {
+          font-size: 14px;
+        }
+        .view-more {
+          font-size: 14px;
+          color: #909090;
+        }
+      }
+      .user-comment-next {
+        padding: 0px 0px 0px 15px;
+      }
+
+      .user-id-span {
+        font-weight: 550;
+      }
+      .user-comment-span {
+        padding: 0px 0px 0px 15px;
+      }
+    }
+
+    .time {
+      padding: 10px 0px 10px 15px;
+      font-size: 13px;
+      color: #909090;
+    }
+
+    .comment-likebtn {
+      height: 15px;
+    }
+
+    .new-comment {
+      display: flex;
+      border-top: 0.01em solid #dbdbdb;
+      padding: 15px;
+      .smile-icon {
+        height: 17px;
+      }
+      .write-new-comment {
+        border: none;
+        width: 100%;
+        height: 100%;
+        font-size: 15px;
+        margin-left: 10px;
+        outline: none;
+      }
+      .upload-btn {
+        border: none;
+        font-size: 15px;
+        color: #bfe0fd;
+        background-color: white;
+        width: 10%;
+        cursor: pointer;
+      }
+      .upload-btn:hover {
+        color: #5fa1d0;
+      }
+    }
+  }
+}
