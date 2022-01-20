@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  .nav-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    border-bottom: 0.1px solid lightgray;
+    .section-left {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 50px;
+      width: 100%;
+
+      .instalogo {
+        height: 33px;
+        margin-left: 190px;
+      }
+    }
+
+    .section-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-left: 180px;
+
+      .icon-search-clear {
+        height: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .clear-search-btn {
+        border: none;
+        position: relative;
+        margin-left: 240px;
+      }
+    }
+
+    .section-right {
+      display: flex;
+      justify-content: right;
+      margin-right: 260px;
+      width: 100%;
+    }
+
+    .icon-heart {
+      margin-left: 30px;
+    }
+
+    .icon-home {
+      margin-left: 30px;
+    }
+
+    .icon-profile {
+      margin-left: 30px;
+      height: 26px;
+    }
+
+    .search-box {
+      position: absolute;
+      height: 35px;
+      background-color: #efefef;
+      border: none;
+      width: 280px;
+      border-radius: 7px;
+      font-size: 18px;
+      padding-left: 20px;
+      position: relative;
+      font-family: FontAwesome;
+      outline: none;
+      position: absolute;
+    }
+  }
+  .icon {
+    height: 25px;
+  }
+}
