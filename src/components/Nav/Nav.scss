@@ -28,6 +28,9 @@
       align-items: center;
       width: 100%;
       margin-left: 180px;
+      // .icon-search-clear {
+      //   height: 20px;
+      // }
     }
 
     .section-right {
@@ -51,14 +54,17 @@
     }
 
     .search-box {
+      position: absolute;
       height: 35px;
       background-color: #efefef;
       border: none;
       width: 86%;
       border-radius: 7px;
       font-size: 18px;
-      padding-left: 25px;
+      padding-left: 20px;
       position: relative;
+      font-family: FontAwesome;
+      outline: none;
     }
     .icon {
       height: 25px;
